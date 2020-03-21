@@ -1,0 +1,27 @@
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.AcademicSubjectVO" table="academic_subject">
+
+		<id name="academicSubjectId" type="int" column="AcademicSubjectID">
+			<generator class="increment" />
+		</id>
+		
+		<property name="academicSubjectName">
+			<column name="AcademicSubjectName" />
+		</property>
+		
+		<property name="academicSubjectDesc">
+			<column name="AcademicSubjectDescription" />
+		</property>
+		
+		
+		<many-to-one class="VO.SubCategoryVO" name="subCategoryVO" column="SubCategoryID"></many-to-one>
+		<many-to-one class="VO.MediumVO" name="mediumVO" column="MediumID"></many-to-one>	
+		<many-to-one class="VO.StandardVO" name="standardVO" column="StandardID"></many-to-one>	
+		
+	</class>
+</hibernate-mapping>

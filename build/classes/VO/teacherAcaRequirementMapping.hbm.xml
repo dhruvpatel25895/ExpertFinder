@@ -1,0 +1,28 @@
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.TeacherAcaRequirementMappingVO" table="teacher_aca_requirement_mapping">
+
+		<id name="teacherAcaRequirementMappingId" type="int" column="teacherAcaRequirementMappingId">
+			<generator class="increment" />
+		</id>
+		
+		<property name="academicFees">
+			<column name="AcademicFees" />
+		</property>
+		
+		
+		
+		<many-to-one class="VO.CategoryVO" name="categoryVO" column="CategoryID"></many-to-one>
+		<many-to-one class="VO.SubCategoryVO" name="subCategoryVO" column="SubCategoryID"></many-to-one>	
+		<many-to-one class="VO.MediumVO" name="mediumVO" column="MediumID"></many-to-one>
+		<many-to-one class="VO.StandardVO" name="standardVO" column="StandardID"></many-to-one>
+		<many-to-one class="VO.AcademicSubjectVO" name="academicSubjectVO" column="AcademicSubjectID"></many-to-one>
+		<many-to-one class="VO.TeacherRequirementVO" name="teacherRequirementVO" column="TeacherRequirementID"></many-to-one>
+		<many-to-one class="VO.LoginVO" name="loginVO" column="UserID"></many-to-one>
+		
+	</class>
+</hibernate-mapping>

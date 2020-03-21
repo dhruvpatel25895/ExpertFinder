@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/expert_finder</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.connection.pool_size">10</property>
+		<property name="show_sql">true</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		<!-- Mapping files -->
+		<mapping resource="VO/category.hbm.xml" />
+		<mapping resource="VO/city.hbm.xml" />
+		<mapping resource="VO/area.hbm.xml" />
+		<mapping resource="VO/subCategory.hbm.xml" />
+		<mapping resource="VO/complain.hbm.xml" />
+		<mapping resource="VO/feedback.hbm.xml" />
+		<mapping resource="VO/medium.hbm.xml" />
+		<mapping resource="VO/standard.hbm.xml" />
+		<mapping resource="VO/academicSubject.hbm.xml" />
+		<mapping resource="VO/nonAcademicSubject.hbm.xml" />
+		<mapping resource="VO/studentRegistration.hbm.xml" />
+		<mapping resource="VO/teacherRegistration.hbm.xml" />
+		<mapping resource="VO/login.hbm.xml" />
+		<mapping resource="VO/studentRequirement.hbm.xml" />
+		<mapping resource="VO/stdAcaRequirementMapping.hbm.xml" />
+		<mapping resource="VO/stdNonAcaRequirementMapping.hbm.xml" />
+		<mapping resource="VO/teacherRequirement.hbm.xml" />
+		<mapping resource="VO/teacherAcaRequirementMapping.hbm.xml" />
+		<mapping resource="VO/teacherNonAcaRequirementMapping.hbm.xml" />
+		<mapping resource="VO/teacherQualification.hbm.xml" />
+		<mapping resource="VO/teacherQualificationFileUpload.hbm.xml" />
+		<mapping resource="VO/apply.hbm.xml" />
+		<mapping resource="VO/demo.hbm.xml" />
+		
+	
+		
+	</session-factory>
+</hibernate-configuration>

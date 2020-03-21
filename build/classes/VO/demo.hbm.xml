@@ -1,0 +1,33 @@
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.DemoVO" table="demo">
+
+		<id name="demoId" type="int" column="DemoID">
+			<generator class="increment" />
+		</id>
+		<property name="date" type="date">
+			<column name="Date" />
+		</property>
+		
+		<property name="time">
+			<column name="Time" />
+		</property>
+		
+		<property name="status">
+			<column name="Status" />
+		</property>
+		
+		<many-to-one class="VO.LoginVO" name="studentId" column="StudentID"></many-to-one>
+		<many-to-one class="VO.LoginVO" name="teacherId" column="TeacherID"></many-to-one>
+		<many-to-one class="VO.StudentRequirementVO" name="studentRequirementId" column="StudentRequirementId"></many-to-one>
+		 <many-to-one class="VO.TeacherRequirementVO" name="teacherRequirementId" column="teacherRequirementId"></many-to-one>
+		 
+		
+		
+		
+	</class>
+</hibernate-mapping>

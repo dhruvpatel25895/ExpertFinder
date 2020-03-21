@@ -1,0 +1,61 @@
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.TeacherRegistrationVO" table="teacher_registration">
+
+		<id name="teacherRegistrationId" type="int" column="TeacherRegistrationID">
+			<generator class="increment" />
+		</id>
+		
+		<property name="firstName">
+			<column name="FirstName" />
+		</property>
+		
+		<property name="middleName">
+			<column name="MiddleName" />
+		</property>
+		
+		<property name="lastName">
+			<column name="LastName" />
+		</property>
+		 
+		<!-- <property name="email">
+			<column name="Email" />
+		</property> -->
+		
+		<property name="birthDate" type="date">
+			<column name="BirthDate" />
+		</property>
+		<property name="phone">
+			<column name="Phone" />
+		</property>
+		
+		<property name="gender">
+			<column name="Gender" />
+		</property>
+		
+		<property name="address">
+			<column name="Address" />
+		</property>
+		
+		
+		
+		<property name="city">
+			<column name="City" />
+		</property>
+		
+		<property name="country">
+			<column name="Country" />
+		</property>
+		
+		<property name="postcode">
+			<column name="Postcode" />
+		</property>
+		
+		<many-to-one class="VO.LoginVO" name="loginVO" column="UserID"></many-to-one>
+	
+	</class>
+</hibernate-mapping>

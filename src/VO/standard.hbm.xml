@@ -1,0 +1,26 @@
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.StandardVO" table="standard">
+
+		<id name="standardId" type="int" column="StandardID">
+			<generator class="increment" />
+		</id>
+		
+		<property name="standardName">
+			<column name="StandardName" />
+		</property>
+		
+		<property name="standardDesc">
+			<column name="StandardDescription" />
+		</property>
+		
+		
+		<many-to-one class="VO.SubCategoryVO" name="subCategoryVO" column="SubCategoryID"></many-to-one>
+		<many-to-one class="VO.MediumVO" name="mediumVO" column="MediumID"></many-to-one>	
+		
+	</class>
+</hibernate-mapping>

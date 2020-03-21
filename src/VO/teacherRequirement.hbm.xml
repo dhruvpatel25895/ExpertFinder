@@ -1,0 +1,29 @@
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.TeacherRequirementVO" table="teacher_requirement">
+	
+	
+
+		<id name="teacherRequirementId" type="int" column="TeacherRequirementId">
+			<generator class="increment" />
+		</id>
+		
+		<property name="time">
+			<column name="Time" />
+		</property>
+		
+		<property name="day">
+			<column name="Day" />
+		</property>
+		
+		
+		<many-to-one class="VO.CityVO" name="cityVO" column="CityID"></many-to-one>	
+		<many-to-one class="VO.AreaVO" name="areaVO" column="AreaID"></many-to-one>	
+		<many-to-one class="VO.LoginVO" name="loginVO" column="UserID"></many-to-one>	
+		
+	</class>
+</hibernate-mapping>

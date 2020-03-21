@@ -1,0 +1,26 @@
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.TeacherNonAcaRequirementMappingVO" table="teacher_non_aca_requirement_mapping">
+
+		<id name="teacherNonAcaRequirementMappingId" type="int" column="TeacherNonAcaRequirementMappingId">
+			<generator class="increment" />
+		</id>
+		
+		<property name="nonAcademicFees">
+			<column name="NonAcademicFees" />
+		</property>
+		
+		
+		
+		<many-to-one class="VO.CategoryVO" name="categoryVO" column="CategoryID"></many-to-one>
+		<many-to-one class="VO.SubCategoryVO" name="subCategoryVO" column="SubCategoryID"></many-to-one>	
+		<many-to-one class="VO.NonAcademicSubjectVO" name="nonAcademicSubjectVO" column="NonAcademicSubjectID"></many-to-one>	
+		<many-to-one class="VO.TeacherRequirementVO" name="teacherRequirementVO" column="TeacherRequirementID"></many-to-one>
+		<many-to-one class="VO.LoginVO" name="loginVO" column="UserID"></many-to-one>
+		
+	</class>
+</hibernate-mapping>

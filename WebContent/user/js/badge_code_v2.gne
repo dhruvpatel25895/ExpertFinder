@@ -1,0 +1,27 @@
+var b_txt = '';
+
+// write the badge
+	
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image1"><a href="http://www.flickr.com/photos/we-are-envato/8886903376/"><img src="http://farm3.staticflickr.com/2812/8886903376_818ab334a7_s.jpg" alt="A photo on Flickr" title="Microlancer Wallpaper 1" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image2"><a href="http://www.flickr.com/photos/we-are-envato/8355855227/"><img src="http://farm9.staticflickr.com/8084/8355855227_78d846aa6f_s.jpg" alt="A photo on Flickr" title="Envato Christmas Party 2012" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image3"><a href="http://www.flickr.com/photos/we-are-envato/7213005116/"><img src="http://farm8.staticflickr.com/7223/7213005116_d59548e1f6_s.jpg" alt="A photo on Flickr" title="K.L Meetup 2012" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image4"><a href="http://www.flickr.com/photos/we-are-envato/11299034113/"><img src="http://farm8.staticflickr.com/7445/11299034113_47a1015830_s.jpg" alt="A photo on Flickr" title="Envato Meetup San Francisco" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image5"><a href="http://www.flickr.com/photos/we-are-envato/4983091491/"><img src="http://farm5.staticflickr.com/4105/4983091491_968820acdf_s.jpg" alt="A photo on Flickr" title="Monkey on my back" height="75" width="75"></a></div>';
+	
+		 	 		
+	b_txt+= '<div class="flickr_badge_image" id="flickr_badge_image6"><a href="http://www.flickr.com/photos/we-are-envato/6466677237/"><img src="http://farm8.staticflickr.com/7146/6466677237_2830f60af4_s.jpg" alt="A photo on Flickr" title="Envato in Metz - France" height="75" width="75"></a></div>';
+
+
+b_txt += '<span style="position:absolute;left:-999em;top:-999em;visibility:hidden" class="flickr_badge_beacon"><img src="http://geo.yahoo.com/p?s=792600102&t=2a360e30b23c17bed6ab3f49698e618d&r=http%3A%2F%2Feducation.themerex.net%2Fcategory%2Fpost-formats%2Fpost-formats-with-sidebar%2F&fl_ev=0&lang=en&intl=in" width="0" height="0" alt="" /></span>';
+
+document.write(b_txt);

@@ -1,0 +1,22 @@
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.ApplyVO" table="apply">
+
+		<id name="applyId" type="int" column="ApplyID">
+			<generator class="increment" />
+		</id>
+		
+		
+		
+		<many-to-one class="VO.LoginVO" name="studentId" column="StudentID"></many-to-one>
+		<many-to-one class="VO.LoginVO" name="teacherId" column="TeacherID"></many-to-one>
+		<many-to-one class="VO.StudentRequirementVO" name="studentRequirementId" column="StudentRequirementId"></many-to-one>
+		<many-to-one class="VO.TeacherRequirementVO" name="teacherRequirementId" column="teacherRequirementId"></many-to-one>
+		
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.NonAcademicSubjectVO" table="non_academic_subject">
+
+		<id name="nonAcademicSubjectId" type="int" column="NonAcademicSubjectID">
+			<generator class="increment" />
+		</id>
+		
+		<property name="nonAcademicSubjectName">
+			<column name="NonAcademicSubjectName" />
+		</property>
+		
+		<property name="nonAcademicSubjectDesc">
+			<column name="NonAcademicSubjectDescription" />
+		</property>
+		
+		
+		<many-to-one class="VO.SubCategoryVO" name="subCategoryVO" column="SubCategoryID"></many-to-one>	
+		
+	</class>
+</hibernate-mapping>

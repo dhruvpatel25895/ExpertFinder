@@ -1,0 +1,35 @@
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.TeacherQualificationFileUploadVO" table="teacher_qualification_file_upload">
+	
+	
+
+		<id name="teacherQualificationFileUploadId" type="int" column="teacherQualificationFileUploadId">
+			<generator class="increment" />
+		</id>
+		
+		
+		<property name="fileName">
+			<column name="FileName" />
+		</property>
+		
+		<property name="filePath">
+			<column name="FilePath" />
+		</property>
+		
+		<property name="fileDescription">
+			<column name="FileDescription" />
+		</property>
+		
+		
+		
+		<many-to-one class="VO.TeacherQualificationVO" name="teacherQualificationVO" column="TeacherQualificationId"></many-to-one>	
+		
+		<many-to-one class="VO.LoginVO" name="loginVO" column="UserID"></many-to-one>	
+		
+	</class>
+</hibernate-mapping>
